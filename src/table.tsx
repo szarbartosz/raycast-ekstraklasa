@@ -1,4 +1,4 @@
-import { ActionPanel, Action, Icon, List } from "@raycast/api";
+import { ActionPanel, Action, List, Icon, Color } from "@raycast/api";
 import useTable from "./hooks/useTable";
 
 export default function Command() {
@@ -13,7 +13,17 @@ export default function Command() {
           title={team.position.toString()}
           subtitle={team.teamName}
           keywords={[team.teamName]}
-          accessories={[{ icon: Icon.Dot, text: team.teamPoints.toString() }]}
+          accessories={[
+            { icon: Icon.SoccerBall, text: team.gamesPlayed.toString() },
+            { icon: Icon.Goal, text: `${team.goalsFor.toString()} - ${team.goalsAgainst.toString()}` },
+            ...team.lastResults.reverse().map((result) => ({
+              icon: {
+                source: Icon.CircleFilled,
+                tintColor: result === 0 ? Color.Red : result === 1 ? Color.SecondaryText : Color.Green,
+              },
+            })),
+            { icon: Icon.LineChart, text: team.teamPoints.toString() },
+          ]}
           actions={
             <ActionPanel>
               <Action.CopyToClipboard content={team.teamName} />
