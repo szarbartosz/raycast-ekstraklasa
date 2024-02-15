@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "ekstraklasa",
-  "title": "ekstraklasa",
+  "title": "Ekstraklasa",
   "description": "Become Puszcza Niepołomice enjoyer",
   "icon": "command-icon.png",
   "author": "szarbartosz",
@@ -14,7 +14,7 @@
     {
       "name": "table",
       "title": "Table",
-      "description": "View the latest Ekstraklasa table",
+      "description": "View the latest Ekstraklasa standings",
       "mode": "view"
     }
   ],
