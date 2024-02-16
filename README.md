@@ -1,8 +1,6 @@
-<div style="display: flex;  justify-content: center; width: 100%">
-  <div>
-    <img src="assets/ekstraklasa-logo.png" height="128">
-    <h1 style="align: center">Ekstraklasa</h1>
-  </div>
+<div align="center">
+  <img src="assets/ekstraklasa-logo.png" height="128">
+  <h1>Ekstraklasa</h1>
 </div>
 
 Stay up to date with the latest Ekstraklasa standings via [Raycast](https://raycast.com/)
