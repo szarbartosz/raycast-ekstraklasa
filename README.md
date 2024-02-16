@@ -3,7 +3,7 @@
   <h1>Ekstraklasa</h1>
 </div>
 
-Stay up to date with the latest Ekstraklasa standings via [Raycast](https://raycast.com/)
+Stay up to date with the latest Ekstraklasa standings.
 
 ![Demo](./metadata/ekstraklasa-1.png)
 
