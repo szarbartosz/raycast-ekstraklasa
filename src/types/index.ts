@@ -1,7 +1,7 @@
-enum MATCH_RESULT {
-  WIN = 0,
+export enum MATCH_RESULT {
+  LOST = 0,
   DRAW = 1,
-  LOSE = 2,
+  WON = 2,
 }
 
 export type Standing = {

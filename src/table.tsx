@@ -1,5 +1,6 @@
 import { ActionPanel, Action, List, Icon, Color } from "@raycast/api";
 import useTable from "./hooks/useTable";
+import { MATCH_RESULT } from "./types";
 
 export default function Command() {
   const standings = useTable();
@@ -20,12 +21,17 @@ export default function Command() {
               text: `${team.goalsFor.toString()} - ${team.goalsAgainst.toString()}`,
               tooltip: "Goals For - Goals Against",
             },
-            ...team.lastResults.map((result) => ({
+            ...team.lastResults.reverse().map((result) => ({
               icon: {
                 source: Icon.CircleFilled,
-                tintColor: result === 0 ? Color.Red : result === 1 ? Color.SecondaryText : Color.Green,
+                tintColor:
+                  result === MATCH_RESULT.LOST
+                    ? Color.Red
+                    : result === MATCH_RESULT.DRAW
+                      ? Color.SecondaryText
+                      : Color.Green,
               },
-              tooltip: result === 0 ? "Lost" : result === 1 ? "Draw" : "Won",
+              tooltip: result === MATCH_RESULT.LOST ? "Lost" : result === MATCH_RESULT.DRAW ? "Draw" : "Won",
             })),
             { icon: Icon.Trophy, text: team.teamPoints.toString(), tooltip: "Points" },
           ]}
