@@ -1,5 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { Standing, Table } from "../types";
+import { showFailureToast } from "@raycast/utils";
 
 const endpoint = "http://localhost:8080";
 
@@ -14,7 +15,7 @@ export const getTable = async (): Promise<Standing[]> => {
 
     return data.standings;
   } catch (e) {
-    console.error(e);
+    showFailureToast(e);
 
     return [];
   }
