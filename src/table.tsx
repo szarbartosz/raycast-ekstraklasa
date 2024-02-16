@@ -4,10 +4,6 @@ import useTable from "./hooks/useTable";
 export default function Command() {
   const standings = useTable();
 
-  // const accessories = useMemo(() => {
-  //   standings?.map((team) => [
-  // }, []);
-
   return (
     <List throttle isLoading={!standings}>
       {standings?.map((team) => (
