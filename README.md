@@ -1,4 +1,4 @@
-<div style="display: flex;  justify-content: center">
+<div style="display: flex;  justify-content: center; flex-grow: 1">
   <div>
     <img src="assets/ekstraklasa-logo.png" height="128">
     <h1 style="align: center">Ekstraklasa</h1>
